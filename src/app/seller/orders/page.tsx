@@ -47,6 +47,33 @@ export default function ManageOrdersPage() {
 
       if (error) throw error;
       
+      const currentOrder = orders.find(o => o.id === orderId);
+      if (currentOrder && currentOrder.users?.email) {
+        try {
+          await fetch('/api/send-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              to: currentOrder.users.email,
+              subject: `Order Update - #${orderId.slice(0, 8)}`,
+              html: `
+                <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+                  <h1 style="color: #ea580c; text-align: center;">KQ Foods</h1>
+                  <h2 style="text-align: center;">Your feast is ${newStatus}!</h2>
+                  <p>Great news! Your order <strong>#${orderId.slice(0, 8)}</strong> is now <strong>${newStatus}</strong>.</p>
+                  <div style="text-align: center; margin: 30px 0;">
+                    <a href="${window.location.origin}/orders/${orderId}" style="background-color: #ea580c; color: white; padding: 15px 25px; text-decoration: none; font-weight: bold; border-radius: 50px;">Track Progress</a>
+                  </div>
+                  <p style="font-size: 12px; color: #666; text-align: center;">Get ready to enjoy your meal!</p>
+                </div>
+              `
+            })
+          });
+        } catch (e) {
+          console.error("Status update email failed", e);
+        }
+      }
+
       setOrders(orders.map(o => o.id === orderId ? { ...o, status: newStatus } : o));
     } catch (error) {
       console.error("Update Status Error:", error);

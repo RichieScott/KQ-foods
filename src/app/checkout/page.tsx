@@ -62,6 +62,32 @@ export default function CheckoutPage() {
 
       if (itemsError) throw itemsError;
 
+      // 3. Send Email Notification
+      try {
+        await fetch('/api/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            to: config.email,
+            subject: `Order Confirmed - #${order.id.slice(0, 8)}`,
+            html: `
+              <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+                <h1 style="color: #ea580c; text-align: center;">KQ Foods</h1>
+                <h2 style="text-align: center;">Your feast is being prepared!</h2>
+                <p>Hi there,</p>
+                <p>Your order <strong>#${order.id.slice(0, 8)}</strong> for <strong>${formatCurrency(total)}</strong> has been received by the artisan kitchen and is now being prepared with care.</p>
+                <div style="text-align: center; margin: 30px 0;">
+                  <a href="${window.location.origin}/orders/${order.id}" style="background-color: #ea580c; color: white; padding: 15px 25px; text-decoration: none; font-weight: bold; rounded-radius: 50px;">Track Order Status</a>
+                </div>
+                <p style="font-size: 12px; color: #666; text-align: center;">Thank you for supporting local artisan chefs!</p>
+              </div>
+            `
+          })
+        });
+      } catch (e) {
+        console.error("Email notification failed", e);
+      }
+
       clearCart();
       router.push(`/orders/${order.id}`);
     } catch (error) {
