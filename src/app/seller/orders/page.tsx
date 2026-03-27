@@ -12,7 +12,10 @@ const statusColors: Record<string, string> = {
   cancelled: "bg-red-100 text-red-800",
 };
 
+export const dynamic = 'force-dynamic';
+
 export default function ManageOrdersPage() {
+
   const [orders, setOrders] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const sellerId = '00000000-0000-0000-0000-000000000001'; // Chef Lola
@@ -62,7 +65,8 @@ export default function ManageOrdersPage() {
                   <h2 style="text-align: center;">Your feast is ${newStatus}!</h2>
                   <p>Great news! Your order <strong>#${orderId.slice(0, 8)}</strong> is now <strong>${newStatus}</strong>.</p>
                   <div style="text-align: center; margin: 30px 0;">
-                    <a href="${window.location.origin}/orders/${orderId}" style="background-color: #ea580c; color: white; padding: 15px 25px; text-decoration: none; font-weight: bold; border-radius: 50px;">Track Progress</a>
+                    <a href="${typeof window !== 'undefined' ? window.location.origin : ''}/orders/${orderId}" style="background-color: #ea580c; color: white; padding: 15px 25px; text-decoration: none; font-weight: bold; border-radius: 50px;">Track Progress</a>
+
                   </div>
                   <p style="font-size: 12px; color: #666; text-align: center;">Get ready to enjoy your meal!</p>
                 </div>

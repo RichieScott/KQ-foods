@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { Camera, Lightbulb, Send, Drafts, ChevronDown, Loader2 } from "lucide-react";
+import { Camera, Lightbulb, Send, FileText, ChevronDown, Loader2 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 export default function AddFoodPage() {
@@ -237,7 +237,7 @@ export default function AddFoodPage() {
                 className="flex-1 bg-secondary-container text-on-secondary-container py-5 rounded-full font-headline font-bold text-lg active:scale-95 transition-all flex items-center justify-center gap-2"
               >
                 <span>Save as Draft</span>
-                <Drafts className="h-5 w-5" />
+                <FileText className="h-5 w-5" />
               </button>
             </div>
             

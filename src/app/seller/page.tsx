@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { TrendingUp, Users, Star, IndianRupee, Plus, ArrowUpward, MoreVertical, Utensils, MessageSquare, Megaphone, ArrowForward } from "lucide-react";
+import { TrendingUp, Users, Star, Wallet, Plus, ArrowUp, MoreVertical, Utensils, MessageSquare, Megaphone, ArrowRight } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 export default function SellerDashboardPage() {
@@ -101,7 +101,7 @@ export default function SellerDashboardPage() {
           <p className="text-stone-500 font-bold uppercase tracking-widest text-[10px]">Total Sales</p>
           <h4 className="text-3xl font-headline font-bold text-on-surface mt-2">{stats.totalSales}</h4>
           <p className="text-xs text-green-600 font-medium mt-2 flex items-center">
-            <ArrowUpward className="h-3 w-3 mr-1" />
+            <ArrowUp className="h-3 w-3 mr-1" />
             12% from last month
           </p>
         </div>
@@ -243,7 +243,7 @@ export default function SellerDashboardPage() {
               </p>
               <button className="mt-4 text-xs font-bold text-primary flex items-center gap-1 group">
                 Analyze Trends
-                <ArrowForward className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
             <div className="absolute -bottom-6 -right-6 opacity-5">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -17,7 +18,6 @@ export const metadata: Metadata = {
   description: "Delicious Nigerian Meals Delivered to You",
 };
 
-import { CartProvider } from "@/context/CartContext";
 
 export default function RootLayout({
   children,

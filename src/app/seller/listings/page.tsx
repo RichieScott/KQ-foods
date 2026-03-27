@@ -2,12 +2,14 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Edit2, Trash2, Plus, Search, Filter, MoreVertical, Utensils } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 export default function ManageListingsPage() {
   const [foods, setFoods] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
   const sellerId = '00000000-0000-0000-0000-000000000001'; // Chef Lola
 
   useEffect(() => {
