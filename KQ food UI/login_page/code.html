@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#8c4a00",
+              "surface-variant": "#dbdddd",
+              "surface-container-low": "#f0f1f1",
+              "on-tertiary-fixed": "#310b00",
+              "primary-fixed-dim": "#ea8000",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#fd8b00",
+              "on-secondary": "#ffefed",
+              "surface-dim": "#d3d5d5",
+              "tertiary-dim": "#8f2f00",
+              "surface-bright": "#f6f6f6",
+              "outline": "#767777",
+              "tertiary-fixed-dim": "#ff7e4a",
+              "tertiary-container": "#ff946c",
+              "on-surface": "#2d2f2f",
+              "on-tertiary": "#ffefeb",
+              "on-primary-fixed-variant": "#512800",
+              "primary": "#8c4a00",
+              "on-tertiary-fixed-variant": "#6a2100",
+              "on-secondary-fixed": "#503733",
+              "secondary-fixed-dim": "#efc9c3",
+              "secondary-fixed": "#fed7d0",
+              "on-error": "#ffefec",
+              "error": "#b02500",
+              "secondary-container": "#fed7d0",
+              "on-primary-container": "#442100",
+              "inverse-surface": "#0c0f0f",
+              "on-primary-fixed": "#180800",
+              "on-tertiary-container": "#5b1b00",
+              "on-secondary-container": "#654945",
+              "on-primary": "#fff0e7",
+              "background": "#f6f6f6",
+              "error-container": "#f95630",
+              "tertiary-fixed": "#ff946c",
+              "error-dim": "#b92902",
+              "inverse-on-surface": "#9c9d9d",
+              "surface-container-high": "#e1e3e3",
+              "secondary-dim": "#644944",
+              "primary-dim": "#7b4000",
+              "on-background": "#2d2f2f",
+              "tertiary": "#a33700",
+              "surface-container": "#e7e8e8",
+              "outline-variant": "#acadad",
+              "surface-container-highest": "#dbdddd",
+              "on-secondary-fixed-variant": "#6f534e",
+              "on-error-container": "#520c00",
+              "secondary": "#715550",
+              "primary-container": "#fd8b00",
+              "primary-fixed": "#fd8b00",
+              "on-surface-variant": "#5a5c5c",
+              "surface": "#f6f6f6"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 64px -12px rgba(45, 47, 47, 0.08);
+        }
+        .bg-mesh {
+            background-color: #f6f6f6;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(253, 139, 0, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(140, 74, 0, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased min-h-screen flex items-center justify-center p-6 bg-mesh">
+<!-- Background Food Element (Asymmetric Placement) -->
+<div class="fixed top-[-10%] right-[-5%] w-[40vw] h-[40vw] opacity-10 pointer-events-none rotate-12">
+<img class="w-full h-full object-cover rounded-full" data-alt="Authentic Nigerian Jollof rice with fried plantain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0lmWmClHf7m49CxuOYF88gSLBnxQy475dlxuFABjMpNipdwSMjrNnZxM1vghcgD5BpoTBjwYgrJBc4jnBTPNJ8w7f9GzKYTIXttBncsCDWBGqj0y684caZ-HiNCHyQXe09qtAOqejmSUDrPL1L5Yzoub9Lzpxl2S4eEZVGZRYzb2jenZOE--osWTdZkXlaM5W9NR-Ulq_eXU0u2S86NKaLLzrVx65NSkpid_MDMlUq0jxPbjx3abOYwUk60wwoqJdRQ-CrWf6WlI"/>
+</div>
+<div class="fixed bottom-[-5%] left-[-5%] w-[30vw] h-[30vw] opacity-10 pointer-events-none -rotate-12">
+<img class="w-full h-full object-cover rounded-full" data-alt="Fresh organic vegetables and African spices" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiusdWEEZuRgZzmLGlxdiFBXGXN1H4wO82mlZJAk2Z5pPNe2QzBjd50s7BI9U1A8TVyppDVH-ODJkZHJmxquUTiaMhDWhhT7gi427ekr7wcgotROgTSmuImanaNn6dzkfPRUN7F_KtaRuxRheZVKjiXEgMLZty1bgW49ttLDFvsEvt2GFXxxx3ME36DDaUBbomMWT6HoEbFPCeWwzWYMdA7S8pzIbeRsfosV4ndn7M_ghDSofc_qioVHiqnnml3Cb3P-rxkqDJSsU"/>
+</div>
+<!-- Login Container -->
+<main class="w-full max-w-[1100px] grid md:grid-cols-2 bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow">
+<!-- Left Side: Editorial Image/Branding -->
+<section class="hidden md:flex flex-col justify-between p-12 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 opacity-40 mix-blend-multiply">
+<img class="w-full h-full object-cover" data-alt="Close up of gourmet African cuisine textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgvXsV1AJfbpliAAaoyqa0IyIVqk1V8Pt1F3cYj1ZyXAUKiW9l8IbEDZVaMg6Amvkw8pQ-5uxwafqJ20GOBCsfFmmmxmRP9RYlS3-dDrgj0wrdeIzrvY4H7KmAfcLKh_Yf0eLlMQe9z0t6dSjF92qrk-Kx11Z-0NMDjgbXN2OEMKKel5fpkPVFb4tCUc7IQcMqZbXosvLzFxikooaDP8Ir2BgjxuJzKbt_JPYeekMYYnfu3qxumBLuyblaiqfr42sYXWl6RxpVFew"/>
+</div>
+<div class="relative z-10">
+<h1 class="font-headline font-black text-4xl text-on-primary tracking-tighter">KQ Foods</h1>
+<p class="font-headline font-bold text-on-primary/80 text-lg mt-2">The Digital Artisan Marketplace</p>
+</div>
+<div class="relative z-10">
+<blockquote class="font-headline text-2xl font-semibold text-on-primary leading-tight">
+                    "Authentic flavors delivered with modern precision."
+                </blockquote>
+<div class="mt-6 flex gap-2">
+<div class="w-12 h-1 bg-on-primary rounded-full"></div>
+<div class="w-4 h-1 bg-on-primary/30 rounded-full"></div>
+<div class="w-4 h-1 bg-on-primary/30 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Right Side: Login Form -->
+<section class="p-8 md:p-16 flex flex-col justify-center">
+<div class="mb-10 text-center md:text-left">
+<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight mb-2">Welcome Back</h2>
+<p class="text-on-surface-variant font-medium">Please enter your culinary credentials.</p>
+</div>
+<!-- Role Selector (Tabs) -->
+<div class="bg-surface-container-low p-1.5 rounded-full flex mb-10 relative">
+<button class="flex-1 py-3 px-6 rounded-full text-sm font-bold tracking-widest uppercase font-label transition-all bg-primary text-on-primary shadow-sm">
+                    Buyer
+                </button>
+<button class="flex-1 py-3 px-6 rounded-full text-sm font-bold tracking-widest uppercase font-label text-on-surface-variant hover:text-on-surface transition-all">
+                    Seller
+                </button>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<div>
+<label class="block font-label text-[10px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 ml-1">Email Address</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-outline/50 font-medium" placeholder="chef@kqfoods.com" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2 ml-1">
+<label class="block font-label text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Password</label>
+<a class="text-[10px] font-bold tracking-widest uppercase text-primary hover:opacity-80 transition-opacity" href="#">Forgot?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-outline/50 font-medium" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-3 py-2">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 cursor-pointer" id="remember" type="checkbox"/>
+<label class="text-sm font-medium text-on-surface-variant cursor-pointer select-none" for="remember">Remember me on this device</label>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-headline font-bold rounded-full shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2" type="submit">
+                    Login to Kitchen
+                    <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</form>
+<!-- Social/Alt Login -->
+<div class="mt-10 pt-10 border-t-2 border-surface-container flex flex-col items-center gap-6">
+<p class="text-xs font-bold tracking-widest uppercase text-outline/60">Or continue with</p>
+<div class="flex gap-4 w-full">
+<button class="flex-1 flex items-center justify-center py-3 bg-surface-container rounded-lg hover:bg-surface-container-highest transition-colors">
+<img class="w-5 h-5" data-alt="Google login logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBVlRBUnPAx9_lrnPbwgiSRLe4IjZg-V-UmzFZXWsvsrtsX4ggwd747GVw6dXGS_Xr4Q230Lm6cKvHKKpDlf2oPAgSo8EAntNamNxZlQvlwj4_62SVrLak_ABexKwD7dC9MxpD5OIC1q5Tjh-zbR-U9QI6UwYYVwhBPpmfrijRe5aJy_x6d8dHO9gflJUhuaTcsxpMrP7jnbHwZw4jhU861mjrlrL0Q3lGDX6_YIssU36tVuCZvhadflZeKAeywqcwifayBLg82EU"/>
+</button>
+<button class="flex-1 flex items-center justify-center py-3 bg-surface-container rounded-lg hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 1;">ios</span>
+</button>
+</div>
+<p class="mt-4 text-sm font-medium text-on-surface-variant">
+                    Don't have an account? 
+                    <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4" href="#">Sign Up</a>
+</p>
+</div>
+</section>
+</main>
+<!-- Decorative Caption (Bottom Left) -->
+<div class="fixed bottom-8 left-8 hidden lg:block">
+<div class="flex items-center gap-4 text-on-surface-variant/40">
+<span class="text-[10px] font-bold tracking-[0.3em] uppercase vertical-text transform -rotate-180" style="writing-mode: vertical-rl;">EST. 2024</span>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<p class="text-[10px] font-bold tracking-widest uppercase">Lagos • Abuja • London</p>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Orders Management | KQ Foods</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6f6f6;
+            color: #2d2f2f;
+        }
+        .font-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-header {
+            background: rgba(246, 246, 246, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#8c4a00",
+              "on-tertiary-fixed": "#310b00",
+              "surface-bright": "#f6f6f6",
+              "secondary-dim": "#644944",
+              "secondary-container": "#fed7d0",
+              "primary": "#8c4a00",
+              "error-dim": "#b92902",
+              "on-surface-variant": "#5a5c5c",
+              "on-tertiary-container": "#5b1b00",
+              "surface": "#f6f6f6",
+              "inverse-primary": "#fd8b00",
+              "on-primary-fixed-variant": "#512800",
+              "surface-container-high": "#e1e3e3",
+              "primary-dim": "#7b4000",
+              "background": "#f6f6f6",
+              "secondary": "#715550",
+              "tertiary-container": "#ff946c",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#2d2f2f",
+              "on-primary-container": "#442100",
+              "inverse-on-surface": "#9c9d9d",
+              "outline-variant": "#acadad",
+              "on-primary": "#fff0e7",
+              "primary-container": "#fd8b00",
+              "on-surface": "#2d2f2f",
+              "on-tertiary-fixed-variant": "#6a2100",
+              "on-primary-fixed": "#180800",
+              "tertiary": "#a33700",
+              "inverse-surface": "#0c0f0f",
+              "secondary-fixed": "#fed7d0",
+              "outline": "#767777",
+              "error": "#b02500",
+              "surface-dim": "#d3d5d5",
+              "surface-variant": "#dbdddd",
+              "on-secondary-fixed": "#503733",
+              "tertiary-fixed-dim": "#ff7e4a",
+              "secondary-fixed-dim": "#efc9c3",
+              "tertiary-dim": "#8f2f00",
+              "surface-container": "#e7e8e8",
+              "on-error": "#ffefec",
+              "surface-container-low": "#f0f1f1",
+              "primary-fixed-dim": "#ea8000",
+              "surface-container-highest": "#dbdddd",
+              "on-secondary": "#ffefed",
+              "tertiary-fixed": "#ff946c",
+              "on-secondary-fixed-variant": "#6f534e",
+              "on-error-container": "#520c00",
+              "primary-fixed": "#fd8b00",
+              "on-tertiary": "#ffefeb",
+              "error-container": "#f95630",
+              "on-secondary-container": "#654945"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased overflow-x-hidden">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col p-4 bg-stone-50 dark:bg-stone-950 h-screen w-64 border-r-0 font-['Plus_Jakarta_Sans'] font-medium antialiased">
+<div class="mb-8 px-4 py-2">
+<h1 class="text-xl font-bold text-orange-900 dark:text-orange-200 tracking-tight">KQ Foods</h1>
+<p class="text-xs text-stone-500 font-medium">Artisan Kitchen</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-orange-100 dark:bg-orange-900/30 text-orange-900 dark:text-orange-100 rounded-xl font-bold transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span>Orders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span>Menu</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto p-4 bg-orange-50 dark:bg-orange-900/10 rounded-xl">
+<button class="w-full py-3 px-4 bg-primary text-on-primary rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>New Listing</span>
+</button>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="sticky top-0 right-0 z-30 flex items-center justify-between px-8 ml-64 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl w-full h-20 shadow-sm dark:shadow-none font-['Plus_Jakarta_Sans'] text-lg font-semibold">
+<div class="flex items-center gap-4">
+<span class="text-orange-800 dark:text-orange-400">Orders Management</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative focus-within:ring-2 focus-within:ring-orange-500/20 rounded-lg">
+<input class="bg-surface-container-high border-none rounded-lg pl-10 pr-4 py-2 text-sm w-64 focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search orders..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-lg" data-icon="search">search</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-stone-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-stone-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-orange-100">
+<img alt="Chef Avatar" class="w-full h-full object-cover" data-alt="Portrait of a professional African chef in uniform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGzJaLRdKeTJYfBOO7WEhd4RxMbo6bBfWfBf7tN3Lv-7VViHCJRfeYcQNxRy7DBoTVbah2IBC_rozzkCD6KCb6mxfRs2qNsmb5Mg8g6Yd9heJ_JSqdHNk6H1a97wZiwGZhGRNTl6kwASLMTR2_rbke4_1YM5P3wuX4J8_uCmVoe9dJihu9sL8xLF37BIg5oOHZztkLWpl_h7YPFRNILTzHVOQq8jsbaFcXVsAn_gcDjW-YaJAZV1rLDnsYtag3CbMvFAtgslGhn5o"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-8 min-h-screen">
+<!-- Header & Statistics -->
+<section class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<h2 class="text-3xl font-extrabold font-headline tracking-tight text-on-surface">Orders Management</h2>
+<p class="text-on-surface-variant flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    14 active orders currently in progress
+                </p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-3 bg-secondary-container text-on-secondary-container rounded-full font-semibold flex items-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="download">download</span>
+                    Export CSV
+                </button>
+<button class="px-6 py-3 bg-primary text-on-primary rounded-full font-semibold flex items-center gap-2 hover:opacity-90 shadow-lg shadow-primary/20 transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="print">print</span>
+                    Print Labels
+                </button>
+</div>
+</section>
+<!-- Filters & Sorting -->
+<section class="mb-8 space-y-6">
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-bold text-sm transition-all">All Orders</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-medium text-sm transition-all flex items-center gap-2">
+                    New <span class="bg-primary text-on-primary text-[10px] px-1.5 py-0.5 rounded-full">3</span>
+</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-medium text-sm transition-all flex items-center gap-2">
+                    Preparing <span class="bg-primary-container text-on-primary-container text-[10px] px-1.5 py-0.5 rounded-full">5</span>
+</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-medium text-sm transition-all">Ready for Pickup (2)</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-medium text-sm transition-all">Out for Delivery (4)</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-medium text-sm transition-all">Completed</button>
+</div>
+<div class="flex justify-between items-center bg-surface-container-low p-2 rounded-xl">
+<div class="flex items-center gap-2 px-3">
+<span class="text-sm font-medium text-on-surface-variant">Sorted by:</span>
+<button class="flex items-center gap-1 text-sm font-bold text-primary">
+                        Newest First
+                        <span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+<button class="p-2 bg-surface-container-highest text-primary rounded-lg shadow-sm transition-all">
+<span class="material-symbols-outlined" data-icon="view_list">view_list</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Orders Table/List Grid -->
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-8 space-y-4">
+<!-- Order Card 1: New -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-amber-500"></div>
+<div class="flex items-start justify-between">
+<div class="flex gap-5">
+<div class="w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img alt="Jollof Rice" class="w-full h-full object-cover" data-alt="Close up of steaming Nigerian party jollof rice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVYaVLTdTdIOkByZA7K3W0W3Oiw9hENdDUwfu0ch2tYgODc5WrqHfFsjVwuUbGFe75islEmIFAGzjfAtIFppLXKjcICpVVvK2FoIhnnSUnQhaKBa5WioJsWO33RcZ_oqqhnhKPNKf9It5pO6raIQR8b5Vi6LsKWU2pK848xI-kH5rSTkM81f_kDJzoNk3QEjbvPGTqAU6iKDthnr_MpHpLk6S8RSH65GhSvLFQRHAeeoEgaCPa1hxug5Cds8MHWA6vUs96-sBuddM"/>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<span class="text-sm font-bold text-primary font-headline tracking-wide">#KQ-98231</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800">NEW ORDER</span>
+</div>
+<h3 class="text-lg font-bold font-headline text-on-surface">Chisom Okafor</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    12 Admiralty Way, Lekki Phase 1, Lagos
+                                </p>
+</div>
+</div>
+<div class="text-right">
+<div class="text-xl font-extrabold font-headline text-on-surface">₦14,500.00</div>
+<div class="text-xs font-medium text-on-surface-variant">Placed 12:30 PM (20 mins ago)</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t-2 border-surface-container flex items-center justify-between">
+<div class="text-sm">
+<span class="font-bold text-on-surface">2 items:</span>
+<span class="text-on-surface-variant">Party Jollof (L), 2x Suya</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="chat_bubble_outline">chat_bubble_outline</span>
+</button>
+<button class="px-4 py-2 border-2 border-outline-variant/20 rounded-lg text-sm font-bold hover:bg-surface-container-low transition-all">View Details</button>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-sm font-bold shadow-md shadow-primary/10 hover:opacity-90 transition-all">Accept &amp; Prepare</button>
+</div>
+</div>
+</div>
+<!-- Order Card 2: Preparing -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-orange-600"></div>
+<div class="flex items-start justify-between">
+<div class="flex gap-5">
+<div class="w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img alt="Egusi Soup" class="w-full h-full object-cover" data-alt="Rich Nigerian Egusi soup served with pounded yam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWWfe5p4pXeBVNb76LP2TmWSHl7c_1EdqcnyMje-g-pFDzu3b3RmaBgbF9ZFxBKJ7OXwMyzWk9AAwaZhquQKN1LYl0w_Csf0iUVydPAmoofhWF9k2K3wdneIAxXG4wi1BOgWgleEDwIDD1KdWkWLqN_FPb52NlEAUNJKLuU6fkCXRnwC-Skf3LjX3-_609gFyFBKu9CB4o96dRLD8diF5qzSiOGXJd0GOqj7lmJhzN0U88RS6Kr0gyG4EOlLrNgBJyQqKwsvxo6M4"/>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<span class="text-sm font-bold text-primary font-headline tracking-wide">#KQ-98228</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-orange-100 text-orange-800">PREPARING</span>
+</div>
+<h3 class="text-lg font-bold font-headline text-on-surface">Tunde Afolayan</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    Banana Island, Gate 2, Ikoyi
+                                </p>
+</div>
+</div>
+<div class="text-right">
+<div class="text-xl font-extrabold font-headline text-on-surface">₦8,200.00</div>
+<div class="text-xs font-medium text-on-surface-variant">Placed 12:15 PM (35 mins ago)</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t-2 border-surface-container flex items-center justify-between">
+<div class="text-sm">
+<span class="font-bold text-on-surface">3 items:</span>
+<span class="text-on-surface-variant">Egusi Special, Pounded Yam (x2)</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="chat_bubble_outline">chat_bubble_outline</span>
+</button>
+<button class="px-4 py-2 border-2 border-outline-variant/20 rounded-lg text-sm font-bold hover:bg-surface-container-low transition-all">View Details</button>
+<button class="px-4 py-2 bg-secondary text-on-secondary rounded-lg text-sm font-bold hover:opacity-90 transition-all">Ready for Pickup</button>
+</div>
+</div>
+</div>
+<!-- Order Card 3: Out for Delivery -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden opacity-80">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-blue-500"></div>
+<div class="flex items-start justify-between">
+<div class="flex gap-5">
+<div class="w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img alt="Grilled Meat" class="w-full h-full object-cover" data-alt="Platter of grilled chicken and plantain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzhb7wqxuUuxrVN7Ia9u45w5XGchk7Je_sn2DecTx0jT41B65b-9tvMDA8VoYE036OpQyJLrDLy2s87Imh5gScclshm5w6CvEhYNi4EE4H7wtI44mQQpCxD4pH9ycaOUlu6xOkfcRQh3AR_w6vNj6CM8HvEBvXZQ68HmIJFmVEJaRN28E57oeQnf25-u1Uj-q50agHViIczk0RwUYgktgH9kggZ7i-yNhvVFGKjObDrWPsTc6CGBkmz_7RMYg6hg-QCxolC5JcR9o"/>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<span class="text-sm font-bold text-primary font-headline tracking-wide">#KQ-98215</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-800">ON THE WAY</span>
+</div>
+<h3 class="text-lg font-bold font-headline text-on-surface">Sarah Johnson</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    Plot 45, VI Extension, Lagos
+                                </p>
+</div>
+</div>
+<div class="text-right">
+<div class="text-xl font-extrabold font-headline text-on-surface">₦12,000.00</div>
+<div class="text-xs font-medium text-on-surface-variant">Placed 11:45 AM (1h ago)</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t-2 border-surface-container flex items-center justify-between">
+<div class="text-sm">
+<span class="font-bold text-on-surface">1 item:</span>
+<span class="text-on-surface-variant">Gourmet Platter (Large)</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="chat_bubble_outline">chat_bubble_outline</span>
+</button>
+<button class="px-4 py-2 border-2 border-outline-variant/20 rounded-lg text-sm font-bold hover:bg-surface-container-low transition-all">Track Driver</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Sidebar Contextual -->
+<div class="hidden lg:block lg:col-span-4">
+<div class="bg-surface-container-low rounded-xl p-6 sticky top-28 border border-outline-variant/10">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-headline font-bold text-lg">Order Highlights</h4>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="more_vert">more_vert</span>
+</div>
+<div class="space-y-6">
+<!-- Special Notes Section -->
+<div class="bg-surface-container-lowest p-4 rounded-xl">
+<h5 class="text-xs font-bold text-primary-dim mb-3 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="sticky_note_2">sticky_note_2</span>
+                                Special Instructions
+                            </h5>
+<div class="space-y-3">
+<div class="p-3 bg-tertiary-container/10 border-l-4 border-tertiary rounded-r-lg">
+<p class="text-xs font-bold text-on-surface">#KQ-98231</p>
+<p class="text-sm text-on-surface-variant italic">"Extra spicy Jollof, please. And no onions in the Suya salad."</p>
+</div>
+<div class="p-3 bg-secondary-container/20 border-l-4 border-secondary rounded-r-lg">
+<p class="text-xs font-bold text-on-surface">#KQ-98228</p>
+<p class="text-sm text-on-surface-variant">"Package pounded yam separately."</p>
+</div>
+</div>
+</div>
+<!-- Logistics Status -->
+<div class="bg-surface-container-lowest p-4 rounded-xl">
+<h5 class="text-xs font-bold text-on-surface-variant mb-4 uppercase tracking-widest">Active Courier Status</h5>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="moped">moped</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold">Courier Assigned</p>
+<p class="text-[10px] text-on-surface-variant">James (Glovo) - 4.8★</p>
+</div>
+<span class="text-[10px] font-bold text-orange-600">ETA 5m</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-400 text-lg" data-icon="moped">moped</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold text-stone-400">Searching for courier...</p>
+<p class="text-[10px] text-on-surface-variant">Order #KQ-98231</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Revenue Snapshot -->
+<div class="p-5 bg-gradient-to-br from-primary to-primary-dim rounded-xl text-on-primary">
+<p class="text-xs font-medium opacity-80 mb-1">Today's Revenue</p>
+<h3 class="text-2xl font-extrabold font-headline">₦142,800</h3>
+<div class="mt-3 flex items-center gap-1 text-[10px] font-bold bg-white/20 w-fit px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[10px]" data-icon="trending_up">trending_up</span>
+                                12% vs yesterday
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Map context footer or secondary info -->
+<footer class="ml-64 p-8 pt-0">
+<div class="bg-surface-container-low rounded-2xl h-64 w-full relative overflow-hidden grayscale">
+<img alt="Map Area" class="w-full h-full object-cover opacity-30" data-location="Lagos, Nigeria" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8ESI9DVaDxAUt2jv0j32YdVHlqRvf70ff970QMu8qvR_B_I0cnMcU4h8BmtagLtzEjP2ilcKnltEO3mL9LpSWOSFHyXaRZvWepPu8Wm3JWxm9u8NFcQFu6e_N68X1KJQHDkYZK1r0wpeZ85IGDXDLQhyqKuNndQqRn2ZUfrdYtbLw63rhxvcKhdxpyIWHsWFFUZtbOiSsqPC5HZ-ulIwJFaP78M44JZ9BQNVhGcoX-vszLvK7uN6alqW9a0Ut0QySs8abmpgvaqs"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-surface-container-lowest/90 backdrop-blur px-6 py-4 rounded-xl shadow-xl text-center">
+<h5 class="font-headline font-bold text-primary mb-1">Live Delivery Map</h5>
+<p class="text-xs text-on-surface-variant">Tracking 4 active deliveries in Lekki/VI</p>
+<button class="mt-3 text-xs font-bold underline text-on-surface hover:text-primary transition-all">Expand View</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

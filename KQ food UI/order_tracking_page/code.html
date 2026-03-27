@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track Your Feast | KQ Foods</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#f6f6f6",
+              "on-primary-fixed-variant": "#512800",
+              "inverse-primary": "#fd8b00",
+              "on-secondary": "#ffefed",
+              "surface-container-highest": "#dbdddd",
+              "on-error": "#ffefec",
+              "tertiary-fixed-dim": "#ff7e4a",
+              "primary-container": "#fd8b00",
+              "on-tertiary": "#ffefeb",
+              "outline-variant": "#acadad",
+              "surface": "#f6f6f6",
+              "on-secondary-fixed-variant": "#6f534e",
+              "primary-dim": "#7b4000",
+              "surface-container": "#e7e8e8",
+              "tertiary-dim": "#8f2f00",
+              "tertiary-container": "#ff946c",
+              "surface-container-high": "#e1e3e3",
+              "surface-dim": "#d3d5d5",
+              "primary-fixed-dim": "#ea8000",
+              "primary": "#8c4a00",
+              "inverse-surface": "#0c0f0f",
+              "outline": "#767777",
+              "primary-fixed": "#fd8b00",
+              "surface-container-low": "#f0f1f1",
+              "on-secondary-fixed": "#503733",
+              "on-primary-container": "#442100",
+              "surface-variant": "#dbdddd",
+              "secondary-fixed-dim": "#efc9c3",
+              "tertiary": "#a33700",
+              "on-tertiary-fixed": "#310b00",
+              "error-dim": "#b92902",
+              "on-background": "#2d2f2f",
+              "secondary-container": "#fed7d0",
+              "on-secondary-container": "#654945",
+              "secondary-fixed": "#fed7d0",
+              "on-primary": "#fff0e7",
+              "on-tertiary-fixed-variant": "#6a2100",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#180800",
+              "error-container": "#f95630",
+              "surface-tint": "#8c4a00",
+              "on-tertiary-container": "#5b1b00",
+              "secondary": "#715550",
+              "background": "#f6f6f6",
+              "on-surface-variant": "#5a5c5c",
+              "on-error-container": "#520c00",
+              "secondary-dim": "#644944",
+              "error": "#b02500",
+              "on-surface": "#2d2f2f",
+              "inverse-on-surface": "#9c9d9d",
+              "tertiary-fixed": "#ff946c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 64px -12px rgba(45, 47, 47, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-orange-50 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-orange-900 dark:text-orange-500 font-headline">KQ Foods</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-orange-50 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined text-on-surface">notifications</span>
+</button>
+<button class="p-2 hover:bg-orange-50 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined text-on-surface">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Tracking Header -->
+<section class="mb-12">
+<span class="text-xs font-bold tracking-[0.2em] text-primary uppercase font-label mb-2 block">Order #KQ-98231</span>
+<h2 class="text-4xl md:text-5xl font-extrabold font-headline text-on-surface tracking-tight mb-4">Track Your Feast</h2>
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full editorial-shadow">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<span class="text-sm font-semibold">Food is being prepared</span>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Column: Progress & Map -->
+<div class="lg:col-span-7 space-y-10">
+<!-- Visual Progress Tracker (Vertical Editorial Style) -->
+<div class="bg-surface-container-lowest p-8 rounded-xl editorial-shadow">
+<h3 class="text-lg font-bold font-headline mb-8">Live Status</h3>
+<div class="relative space-y-8">
+<!-- Step 1: Done -->
+<div class="flex items-start gap-6 group">
+<div class="relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary z-10">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-0.5 h-12 bg-primary absolute top-10"></div>
+</div>
+<div class="pt-1">
+<h4 class="font-bold text-on-surface">Order Placed</h4>
+<p class="text-sm text-on-surface-variant">We've received your feast request at 12:30 PM</p>
+</div>
+</div>
+<!-- Step 2: Done -->
+<div class="flex items-start gap-6 group">
+<div class="relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary z-10">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-0.5 h-12 bg-primary absolute top-10"></div>
+</div>
+<div class="pt-1">
+<h4 class="font-bold text-on-surface">Seller Accepted</h4>
+<p class="text-sm text-on-surface-variant">Mama T's Kitchen is ready to cook</p>
+</div>
+</div>
+<!-- Step 3: Active -->
+<div class="flex items-start gap-6 group">
+<div class="relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container z-10 border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<div class="w-0.5 h-12 bg-surface-container-highest absolute top-10"></div>
+</div>
+<div class="pt-1">
+<h4 class="font-bold text-primary">Preparing</h4>
+<p class="text-sm text-on-surface">The spices are being layered perfectly</p>
+</div>
+</div>
+<!-- Step 4: Pending -->
+<div class="flex items-start gap-6 opacity-40">
+<div class="relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant z-10">
+<span class="material-symbols-outlined text-xl">delivery_dining</span>
+</div>
+<div class="w-0.5 h-12 bg-surface-container-highest absolute top-10"></div>
+</div>
+<div class="pt-1">
+<h4 class="font-bold">Out for Delivery</h4>
+<p class="text-sm">A rider will be assigned soon</p>
+</div>
+</div>
+<!-- Step 5: Pending -->
+<div class="flex items-start gap-6 opacity-40">
+<div class="relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant z-10">
+<span class="material-symbols-outlined text-xl">home_pin</span>
+</div>
+</div>
+<div class="pt-1">
+<h4 class="font-bold">Delivered</h4>
+<p class="text-sm">Enjoy your meal!</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Delivery Details & Map Area -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">schedule</span>
+<span class="text-xs font-bold uppercase tracking-wider font-label">Estimated Arrival</span>
+</div>
+<p class="text-3xl font-extrabold font-headline">25 - 35 min</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">location_on</span>
+<span class="text-xs font-bold uppercase tracking-wider font-label">Delivery Address</span>
+</div>
+<p class="text-sm font-medium leading-relaxed">14, Admiralty Way, Lekki Phase 1, Lagos, Nigeria</p>
+</div>
+</div>
+<!-- Abstract Map Concept (No line) -->
+<div class="h-64 rounded-xl bg-surface-container-high overflow-hidden relative">
+<img alt="Delivery Location Map" class="w-full h-full object-cover grayscale opacity-50" data-alt="Simplified city map showing a delivery route" data-location="Lagos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxihHGBMyrMPx_kLH1TsPKFZ3nKETHhDicQO7_1f4SQWTMyKAu5trq1C_NNsW3ODQGKP6MWMFjMkcNdJ-xtEetiApBr1rr_aPhIQk2HTa4TSzs78LKDPbK7WpWRvbnHxFiVno7EWC55s44PyuSwD5L3hFKqq7QK1VQG0qVUXeoDARtagjUiIGR3X97yRO0DarL-vlTWnJpwC3fWZQhRXw7G08SI8cQIvCP3Aqs4tjL23qozsaVswnoNNYSHGN4oWDP761LtQBxGzQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high/80 to-transparent"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white editorial-shadow ring-8 ring-white/20">
+<span class="material-symbols-outlined">moped</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Summary & Seller -->
+<div class="lg:col-span-5 space-y-10">
+<!-- Seller Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl editorial-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Mama T's Kitchen" class="w-full h-full object-cover" data-alt="Nigerian chef or kitchen logo portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa_9CAnsxDv_YRjAJes7np9B-ATNPd4g5H_137aH432CmANT_SKwYARhGy-Y_75MeNBlYYvSxBsG6Qf25sYI1JHoxBmzbGv4kEB6kFLSSKzCxdr69-mQGQO94KazroyKMyQge345rQdMI4aVSBe5wIxTro7NEF6imVsQGywXIKQ-U4DnUOcJuyPuX2vDdX0kC1XvB6RcWZBR7BraQxBmY1SUJ3Zq2CfFxvhz3RWrV9v2r5WhwYbiu4zzDwdARrAayrzHNNGeDHqiQ"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-lg font-headline">Mama T's Kitchen</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.8</span>
+<span class="text-xs text-on-surface-variant font-medium ml-1">(250+ reviews)</span>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-secondary-container text-on-secondary-container rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-opacity-80 transition-all active:scale-95">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+                        Chat with Seller
+                    </button>
+</div>
+<!-- Order Summary -->
+<div class="bg-surface-container-lowest rounded-xl editorial-shadow overflow-hidden">
+<div class="p-6 bg-surface-container-low">
+<h3 class="font-bold font-headline text-lg">Order Summary</h3>
+</div>
+<div class="p-6 space-y-6">
+<!-- Item 1 -->
+<div class="flex justify-between items-start gap-4">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-lg bg-surface-container overflow-hidden">
+<img alt="Party Jollof Rice" class="w-full h-full object-cover" data-alt="Vibrant Nigerian Jollof Rice platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL60YEfcPvyvvlEMrywXzEqxYRfvjzwYt2WuWztcNmjgQ-8oDfFI3a-n-zslIjG_oiVMx5MPrYaLqiSF92FjwBblP_BGHUi28Xs-7t4IykksHx5odrPJs48UMGVWusYvxh4yWD179n50DgzJL1E63VaxBE1Oxtyg3yCD6KXk7sVC3eBCHuvQhtIlqUAb_e5RlERn_Iwemczfw7aamBxtUmx7M83PNEzo9bJIF7HGs6VfxbuA86N6Ecqj1AiLsbr0RePrim9xcwEak"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Party Jollof Rice</h4>
+<p class="text-xs text-on-surface-variant">Qty: 1 • Extra Dodo</p>
+</div>
+</div>
+<span class="font-bold text-sm">₦4,500</span>
+</div>
+<!-- Item 2 -->
+<div class="flex justify-between items-start gap-4">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-lg bg-surface-container overflow-hidden">
+<img alt="Special Egusi Soup" class="w-full h-full object-cover" data-alt="Traditional Nigerian Egusi soup with pounded yam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe6p86Byr__ny5r4qTvwosPhH1FyAX-Bm8BQCFbxvO0Qd8rHigygwivMjY0FGHwVHrdtN-4dDBGt_hWS4pX6XysVl6ww-AFqbxZVr2WTdkoyo1hSrO8McKYdXR1-K0utrx6IJzVHDV7wJEqtIPc6S8hlKJdub_fW5X0xH7BFoNoPJpMXTKz9oOAbZTfwQWQrvA-xbRvRJADwkbB-VjXFheEL_N32_QNDMhreAZrSwYnxSovAgKaJaHFQbtDogZiyX_T9IOxHZEJzw"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Special Egusi Soup</h4>
+<p class="text-xs text-on-surface-variant">Qty: 1 • Assorted Meat</p>
+</div>
+</div>
+<span class="font-bold text-sm">₦5,200</span>
+</div>
+<div class="pt-6 mt-6 space-y-3">
+<div class="flex justify-between text-sm text-on-surface-variant">
+<span>Subtotal</span>
+<span>₦9,700</span>
+</div>
+<div class="flex justify-between text-sm text-on-surface-variant">
+<span>Delivery Fee</span>
+<span>₦1,500</span>
+</div>
+<div class="flex justify-between text-lg font-extrabold font-headline pt-3 border-t-2 border-surface-container border-dashed">
+<span>Total</span>
+<span class="text-primary">₦11,200</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Support Card -->
+<div class="p-6 bg-primary rounded-xl text-on-primary">
+<h4 class="font-bold mb-2">Need help with this order?</h4>
+<p class="text-xs opacity-80 leading-relaxed mb-4">Our support team is available 24/7 for any questions regarding your feast.</p>
+<a class="text-sm font-bold underline decoration-2 underline-offset-4" href="#">Contact KQ Support</a>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-4px_24px_rgba(0,0,0,0.06)] md:hidden">
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-700 dark:hover:text-orange-300 transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium font-inter uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/30 text-orange-900 dark:text-orange-200 rounded-2xl px-5 py-2 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="text-[10px] font-medium font-inter uppercase tracking-wider mt-1">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-700 dark:hover:text-orange-300 transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium font-inter uppercase tracking-wider mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-700 dark:hover:text-orange-300 transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium font-inter uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f6f6f6",
+              "secondary-fixed": "#fed7d0",
+              "tertiary": "#a33700",
+              "on-surface": "#2d2f2f",
+              "on-secondary-container": "#654945",
+              "surface-container-highest": "#dbdddd",
+              "secondary": "#715550",
+              "on-error-container": "#520c00",
+              "surface-container-high": "#e1e3e3",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#ea8000",
+              "on-tertiary-fixed": "#310b00",
+              "on-primary-container": "#442100",
+              "on-background": "#2d2f2f",
+              "secondary-dim": "#644944",
+              "on-tertiary-fixed-variant": "#6a2100",
+              "on-secondary": "#ffefed",
+              "error-container": "#f95630",
+              "on-primary": "#fff0e7",
+              "surface-variant": "#dbdddd",
+              "outline-variant": "#acadad",
+              "primary-container": "#fd8b00",
+              "on-secondary-fixed": "#503733",
+              "inverse-primary": "#fd8b00",
+              "surface-bright": "#f6f6f6",
+              "tertiary-container": "#ff946c",
+              "surface-container": "#e7e8e8",
+              "secondary-fixed-dim": "#efc9c3",
+              "on-tertiary": "#ffefeb",
+              "primary": "#8c4a00",
+              "error": "#b02500",
+              "inverse-on-surface": "#9c9d9d",
+              "on-primary-fixed-variant": "#512800",
+              "surface-tint": "#8c4a00",
+              "outline": "#767777",
+              "on-tertiary-container": "#5b1b00",
+              "surface-container-low": "#f0f1f1",
+              "background": "#f6f6f6",
+              "on-secondary-fixed-variant": "#6f534e",
+              "primary-dim": "#7b4000",
+              "on-primary-fixed": "#180800",
+              "tertiary-dim": "#8f2f00",
+              "surface-dim": "#d3d5d5",
+              "error-dim": "#b92902",
+              "on-error": "#ffefec",
+              "tertiary-fixed": "#ff946c",
+              "tertiary-fixed-dim": "#ff7e4a",
+              "secondary-container": "#fed7d0",
+              "on-surface-variant": "#5a5c5c",
+              "inverse-surface": "#0c0f0f",
+              "primary-fixed": "#fd8b00"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-shift-no-border {
+        border: none !important;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(24px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-xl shadow-sm shadow-orange-900/5">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-orange-800 dark:text-orange-500 font-headline">KQ Foods</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-neutral-600 dark:text-neutral-400 font-medium hover:bg-orange-50 dark:hover:bg-orange-900/20 px-3 py-2 rounded-lg transition-colors" href="#">Menu</a>
+<a class="text-neutral-600 dark:text-neutral-400 font-medium hover:bg-orange-50 dark:hover:bg-orange-900/20 px-3 py-2 rounded-lg transition-colors" href="#">Orders</a>
+<a class="text-orange-800 dark:text-orange-400 font-bold px-3 py-2 rounded-lg transition-colors" href="#">Rewards</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-neutral-600 hover:bg-orange-50 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-neutral-600 hover:bg-orange-50 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 max-w-7xl mx-auto px-6 space-y-20">
+<!-- Hero Section: Points & Tier -->
+<section class="relative overflow-hidden rounded-xl bg-primary-container p-8 md:p-12 text-on-primary-container">
+<!-- Background Image Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay" data-alt="Abstract spicy jollof rice background texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtw1-jCLORBASXsLRfJFa5PZGNcT5xHe8jdHAHQtMsWsAiJOlXnbQrYn4E5hsJtcd1ZzNAI-E_zOFy6q8fM4VntsYMdR6o08VT1g-5t33pNMeRsNfEFP8f7JKbALZ64Kktmo9Gzk40soEfLU7CyDMeFqfHBRP5u_Pnz0Js3XIPJgHt0iah0TbK-8FNPh3fNMt8d1vWH_rayZXbw_5MdqhHKsYqeVRKK11l0DcozRPflyY2eWiVFQkkPnFX_WPe4sk2e-Q6QopUVLo'); background-size: cover; background-position: center;"></div>
+<div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block px-4 py-1.5 bg-on-primary-container text-on-primary text-xs font-bold rounded-full mb-6 font-label tracking-widest uppercase">Loyalty Status</span>
+<h1 class="font-headline font-extrabold text-5xl md:text-6xl tracking-tight mb-4">Silver Suya Tier</h1>
+<p class="text-xl font-medium opacity-90 mb-8 font-body">2,450 Jollof Points</p>
+<div class="space-y-4 max-w-md">
+<div class="flex justify-between text-sm font-bold font-label">
+<span>Progress to Gold Egusi</span>
+<span>75%</span>
+</div>
+<div class="h-3 w-full bg-on-primary-container/20 rounded-full overflow-hidden">
+<div class="h-full bg-on-primary-container w-3/4 rounded-full"></div>
+</div>
+<p class="text-sm opacity-80">Earn 550 more points to unlock Gold rewards</p>
+</div>
+</div>
+<div class="hidden md:flex justify-end">
+<div class="relative">
+<div class="absolute -inset-4 bg-on-primary-container/10 blur-3xl rounded-full"></div>
+<img alt="Glistening Nigerian Suya Platter" class="w-80 h-80 object-cover rounded-xl shadow-2xl rotate-3 transform hover:rotate-0 transition-transform duration-500" data-alt="Close up of spicy grilled suya meat with onions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQQbt7EkHsTM1zfLCd3B-vrUUJ6dxmHoWKx1zta2xv24YZXJdEV6vA1WwwXLWiw7VcLQj2WUobnlbhZhrBoe3UPuIFNAj5jLkPT5RV8He_bFS3bjDatSOYB1dtKoh2ucz1EdtHXaCctvWZZIwODu1M6SQQayQWQU6GHyxrZmEMk_2Railv3XUrYZu6G8rmJZZt9OOHI7dkqrbXtlDR8IUyLHbbao2CRdEu1qcnzbYDMlVtRTwExCqWT-yw8TWD1AtYoqGC8PKdItY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Redeem Section -->
+<section>
+<div class="mb-10">
+<h2 class="font-headline font-bold text-3xl text-on-surface mb-2">Redeem Your Points</h2>
+<p class="text-on-surface-variant text-lg">Turn your cravings into delicious rewards.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Reward Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Delivery person on a motorcycle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEx95XZpjMNKhNuY7GfcvIIYy2-jiYzEZ0g8QWVeMjC69hyZ3DNrwPYmu5Zl8TWOynQ8RjvbmUTzYMpsHzOGZFcDDkg_3RWCmhXxpWRFmaxybTbLNHAMysxxO1VATAX3-zCoVJalVSW5e5jPGF3h0Azn_w2M-0kFAmZgX9xETo1_xaswMPIXR8hd9l_Hbtmz6KEGMeli-gFcO9eRR3ZtBzCduVezvUohBnmugeMoT1V1e2GhwoZ-K8WOyglKgI8d8Vm9pImXgPQFw"/>
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-xs font-bold">500 PTS</div>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="font-headline font-bold text-xl leading-tight">Free delivery on next 3 orders</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Enjoy your favorite meals without any extra delivery fees.</p>
+<button class="w-full py-3 bg-primary text-on-primary rounded-full font-bold text-sm hover:opacity-90 transition-opacity active:scale-95">Redeem Now</button>
+</div>
+</div>
+<!-- Reward Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Bowl of spicy Jollof rice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0VLO-XRk7Jt_CbywR9ZVqz49W3MDEAdOyk_ByLMh029tYyDTDxCA9tCDFdl6_ZLaukfA-CAGVUT1d1T4Tblf7qDtlxBFF698dh0xKLpnqRdSwqiGBKwH5K1f2vf27IxF729reZxxZxZ59m39gbW3hMwF34klsf-x0TvHDvX0KwEEWthCDQ7DCgTYxy-jibDnkYEz2XHb56_yLZ2XgZWWK1_ABEPp3DHxS3CnCiG_iUsmrniOtfCMRuErmV7ZtDgLziY_ooh1yi9E"/>
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-xs font-bold">800 PTS</div>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="font-headline font-bold text-xl leading-tight">10% off entire order</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Save big on your next feast. Valid for any restaurant on KQ Foods.</p>
+<button class="w-full py-3 bg-primary text-on-primary rounded-full font-bold text-sm hover:opacity-90 transition-opacity active:scale-95">Redeem Now</button>
+</div>
+</div>
+<!-- Reward Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Grilled Nigerian Suya skewers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuaiw-YDRgTxgEJRUhCOnlSPKULoCrqBxADx4FvE46vtsts8urpj2WM5yjUd1uUSfFYAHNTJPq5uans7nG2qnUVkJmSuAlEV_8wqs__yOaoo0w7rlEAVlAQoMoBCUwGDqTy6EEHULyUj8eUT_eGw3sY7vIQEMmKWJIORBovtINjCNCIsDBO5qFIPWBP-Ij_5xzkc6I6Vpfa1JhCcAbfiIiV9KwIu8NAPVa9xvLlmx_6G4Zj_O4eG0_r5i02K8TGvMD6nvDr3856Eo"/>
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-xs font-bold">400 PTS</div>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="font-headline font-bold text-xl leading-tight">Free Suya with any meal</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Add a spicy kick to your lunch with a complimentary side of Suya.</p>
+<button class="w-full py-3 bg-primary text-on-primary rounded-full font-bold text-sm hover:opacity-90 transition-opacity active:scale-95">Redeem Now</button>
+</div>
+</div>
+<!-- Reward Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Wallet and digital payment concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6IjtPsKepVKDoi-oeC-gbM6HAJh1U6GxW3RD90DnyX2QYiC0w41Ua84jY_87v6LaKjEmI5OPtiw7PnZE4y4DwPDsgJXEVKK1sHpBGUL9ZdQIBZENHOwKkqcL8lsZj6tMoyd3nZAT-V8DRNuDG3B-h23E3ypRkYI5EZ8gGc5hIdej0Y4YdknE0PSeCVdi8B3LT9ZiWn093Zh5fy8f3QPIaySSYE5wBPN7Ywr7Qx4P4xeODYKtj9r60U-yTa7_F3X4bDAnkl4EsW4I"/>
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-xs font-bold">1200 PTS</div>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="font-headline font-bold text-xl leading-tight">N1,000 credit to wallet</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Instant credit to spend however you like across the platform.</p>
+<button class="w-full py-3 bg-primary text-on-primary rounded-full font-bold text-sm hover:opacity-90 transition-opacity active:scale-95">Redeem Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: How to Earn -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-3 mb-4">
+<h2 class="font-headline font-bold text-3xl text-on-surface">How to Earn Points</h2>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container-highest transition-colors">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl mb-2">Order Your Favorites</h4>
+<p class="text-on-surface-variant text-sm">Earn 10 Jollof Points for every N1,000 spent on orders.</p>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container-highest transition-colors">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">rate_review</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl mb-2">Share Your Experience</h4>
+<p class="text-on-surface-variant text-sm">Get 50 points for every restaurant review you write.</p>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container-highest transition-colors">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">group_add</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl mb-2">Refer a Friend</h4>
+<p class="text-on-surface-variant text-sm">Earn 500 points when your friend completes their first order.</p>
+</div>
+</div>
+</section>
+<!-- Points History Table -->
+<section class="bg-surface-container-low rounded-xl p-8 overflow-hidden">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline font-bold text-3xl text-on-surface">Points History</h2>
+<p class="text-on-surface-variant mt-1">Your recent activity and redemptions.</p>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                    View All <span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-separate border-spacing-y-2">
+<thead>
+<tr class="text-on-surface-variant font-label text-xs uppercase tracking-widest">
+<th class="px-4 py-2">Activity</th>
+<th class="px-4 py-2">Date</th>
+<th class="px-4 py-2">Type</th>
+<th class="px-4 py-2 text-right">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-surface-container-lowest transition-colors hover:bg-white">
+<td class="px-4 py-6 rounded-l-xl font-medium">Order #KQ-9823 from Mama Cass</td>
+<td class="px-4 py-6 text-on-surface-variant text-sm">Nov 12, 2023</td>
+<td class="px-4 py-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-bold">EARNED</span></td>
+<td class="px-4 py-6 rounded-r-xl text-right font-bold text-primary-dim">+120</td>
+</tr>
+<tr class="bg-surface-container-lowest transition-colors hover:bg-white">
+<td class="px-4 py-6 rounded-l-xl font-medium">Redeemed: 10% Discount Voucher</td>
+<td class="px-4 py-6 text-on-surface-variant text-sm">Nov 08, 2023</td>
+<td class="px-4 py-6"><span class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-bold">REDEEMED</span></td>
+<td class="px-4 py-6 rounded-r-xl text-right font-bold text-error">-800</td>
+</tr>
+<tr class="bg-surface-container-lowest transition-colors hover:bg-white">
+<td class="px-4 py-6 rounded-l-xl font-medium">Friend Referral: Tunde A.</td>
+<td class="px-4 py-6 text-on-surface-variant text-sm">Oct 28, 2023</td>
+<td class="px-4 py-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-bold">EARNED</span></td>
+<td class="px-4 py-6 rounded-r-xl text-right font-bold text-primary-dim">+500</td>
+</tr>
+<tr class="bg-surface-container-lowest transition-colors hover:bg-white">
+<td class="px-4 py-6 rounded-l-xl font-medium">Review: Chicken Republic</td>
+<td class="px-4 py-6 text-on-surface-variant text-sm">Oct 25, 2023</td>
+<td class="px-4 py-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-bold">EARNED</span></td>
+<td class="px-4 py-6 rounded-r-xl text-right font-bold text-primary-dim">+50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-neutral-100 dark:bg-neutral-950 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 gap-6 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-neutral-800 dark:text-neutral-200 font-headline">KQ Foods</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-sm text-neutral-500 hover:text-orange-600 transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-sm text-neutral-500 hover:text-orange-600 transition-opacity duration-300" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-sm text-orange-700 dark:text-orange-500 underline transition-opacity duration-300" href="#">Rewards FAQ</a>
+<a class="font-['Inter'] text-sm text-neutral-500 hover:text-orange-600 transition-opacity duration-300" href="#">Support</a>
+</div>
+<p class="font-['Inter'] text-sm text-neutral-500 dark:text-neutral-400">© 2024 KQ Foods. The Digital Artisan Experience.</p>
+</div>
+</footer>
+</body></html>

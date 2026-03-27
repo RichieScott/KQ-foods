@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#310b00",
+              "surface-container": "#e7e8e8",
+              "on-tertiary-fixed-variant": "#6a2100",
+              "tertiary-fixed-dim": "#ff7e4a",
+              "on-error": "#ffefec",
+              "error-container": "#f95630",
+              "on-primary": "#fff0e7",
+              "tertiary": "#a33700",
+              "on-secondary-fixed-variant": "#6f534e",
+              "secondary-fixed-dim": "#efc9c3",
+              "primary-fixed": "#fd8b00",
+              "on-tertiary-container": "#5b1b00",
+              "primary": "#8c4a00",
+              "secondary-fixed": "#fed7d0",
+              "on-primary-container": "#442100",
+              "outline": "#767777",
+              "on-primary-fixed": "#180800",
+              "on-secondary-container": "#654945",
+              "tertiary-container": "#ff946c",
+              "inverse-on-surface": "#9c9d9d",
+              "secondary-dim": "#644944",
+              "on-background": "#2d2f2f",
+              "surface-container-highest": "#dbdddd",
+              "outline-variant": "#acadad",
+              "inverse-primary": "#fd8b00",
+              "tertiary-fixed": "#ff946c",
+              "surface-container-low": "#f0f1f1",
+              "primary-dim": "#7b4000",
+              "secondary-container": "#fed7d0",
+              "on-surface-variant": "#5a5c5c",
+              "on-secondary-fixed": "#503733",
+              "error-dim": "#b92902",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#e1e3e3",
+              "on-tertiary": "#ffefeb",
+              "primary-fixed-dim": "#ea8000",
+              "on-surface": "#2d2f2f",
+              "error": "#b02500",
+              "surface-dim": "#d3d5d5",
+              "on-primary-fixed-variant": "#512800",
+              "secondary": "#715550",
+              "on-secondary": "#ffefed",
+              "on-error-container": "#520c00",
+              "surface-variant": "#dbdddd",
+              "surface-tint": "#8c4a00",
+              "inverse-surface": "#0c0f0f",
+              "background": "#f6f6f6",
+              "surface-bright": "#f6f6f6",
+              "primary-container": "#fd8b00",
+              "surface": "#f6f6f6",
+              "tertiary-dim": "#8f2f00"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 64px -12px rgba(45, 47, 47, 0.06);
+        }
+        .glass-header {
+            background: rgba(246, 246, 246, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-zinc-200/15 dark:border-zinc-800/15 bg-zinc-50 dark:bg-zinc-950 flex flex-col h-full py-6 z-50">
+<div class="px-6 mb-10">
+<h1 class="font-headline font-bold text-lg text-orange-900 dark:text-orange-100">Artisan Kitchen</h1>
+<p class="text-xs text-zinc-500 font-label">Verified Seller</p>
+</div>
+<nav class="flex-1 space-y-2 px-4">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-800 dark:hover:text-orange-300 px-4 py-3 flex items-center gap-3 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-xl transition-all cursor-pointer transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-sm tracking-wide">Dashboard</span>
+</a>
+<!-- Active Tab: My Listings -->
+<a class="bg-orange-100/50 dark:bg-orange-900/20 text-orange-900 dark:text-orange-100 font-semibold rounded-xl px-4 py-3 flex items-center gap-3 cursor-pointer transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-['Inter'] text-sm tracking-wide">My Listings</span>
+</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-800 dark:hover:text-orange-300 px-4 py-3 flex items-center gap-3 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-xl transition-all cursor-pointer transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Inter'] text-sm tracking-wide">Orders</span>
+</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-800 dark:hover:text-orange-300 px-4 py-3 flex items-center gap-3 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-xl transition-all cursor-pointer transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-['Inter'] text-sm tracking-wide">Analytics</span>
+</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-800 dark:hover:text-orange-300 px-4 py-3 flex items-center gap-3 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-xl transition-all cursor-pointer transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-sm tracking-wide">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-4 pt-6 space-y-2 border-t border-zinc-200/10">
+<button class="w-full bg-primary text-on-primary rounded-full py-3 px-4 font-semibold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Add New Dish
+            </button>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-800 dark:hover:text-orange-300 px-4 py-3 flex items-center gap-3 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-xl transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-['Inter'] text-sm tracking-wide">Support</span>
+</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-800 dark:hover:text-orange-300 px-4 py-3 flex items-center gap-3 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-xl transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-['Inter'] text-sm tracking-wide">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar (Authority: JSON) -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-6 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" data-icon="search">search</span>
+<input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-high rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all border-none" placeholder="Search your culinary creations..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="p-2 text-zinc-500 hover:bg-orange-50 dark:hover:bg-orange-950/30 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-zinc-500 hover:bg-orange-50 dark:hover:bg-orange-950/30 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden ring-2 ring-primary/10">
+<img class="w-full h-full object-cover" data-alt="Seller Profile Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGGf8b07tZWkoUQs1DNAe47lIf5Rh3Mvml8fSpB18mePpZzaHs8a8Mvf3vvTl780eCnz9xlPwjaxosSFtFE5TSQbhqtqpt0iytlXtcVs2RszhOblmt6pnxjaj8u90vB4LrA3KASWlefny3Uw0QG9mfcZ83JBFMF0_dPZ8ZML42EPnia0sPZ8O1dFbVlvAOf35DYae9KdlkiONb9abJLhy6S3lNpCs6t9vPfb5hVrNKcrVSSPCthwtXESdekD3IwxE8Ve4fxDeZ9eU"/>
+</div>
+</div>
+</header>
+<!-- Editorial Content Canvas -->
+<section class="p-8 max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline text-3xl font-bold text-on-background tracking-tight">Manage Listings</h2>
+<p class="text-on-surface-variant mt-1">Refine and showcase your artisan dishes</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest text-on-surface rounded-full font-semibold text-sm editorial-shadow hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="filter_list">filter_list</span>
+                        Category
+                    </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest text-on-surface rounded-full font-semibold text-sm editorial-shadow hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="sort">sort</span>
+                        Status
+                    </button>
+</div>
+</div>
+<!-- Listings Bento-ish Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Card 1: Smoky Jollof Rice -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow transition-transform duration-300 hover:-translate-y-1">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Traditional Nigerian Smoky Jollof Rice with chicken" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhe5XLU-otAk989kSeRCro4myj4nhH6CjTSHjrKDEYRvWcwIpXhsqCHl4NqRfvGRwQNt1Yq4KSnCRDeCIWyPRF8DKQgu87k2y_Ie3J44MBpuKbcd3QBXKGtSv3JvH1Dyu8Zy9SonnHm7FiChl-TOrj7ghL9i0OzHIBqKt5lDmJVz_h7-7UWiOfyHO5H3-DiT7XUzIsqlWu-bO9gdmgiSySIzKeCEq2Ex2dkgIfJbEMHg_HWrblX_5gg-gPOZPGN8CGWyWOa_rFj9I"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary px-3 py-1 rounded-full text-[10px] font-label font-bold tracking-widest uppercase backdrop-blur-md">BESTSELLER</span>
+</div>
+<div class="absolute bottom-4 right-4">
+<div class="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl">
+<span class="font-headline font-bold text-primary text-lg">₦4,500</span>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-xl font-bold text-on-background">Smoky Jollof Rice</h3>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-wider mt-1">Main Course • Traditional</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-label text-primary font-bold">ONLINE</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-4 border-t border-surface-container">
+<button class="flex-1 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                                Edit
+                            </button>
+<button class="flex-1 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="analytics">analytics</span>
+                                Stats
+                            </button>
+<button class="p-2 text-error-dim hover:bg-error-container/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Spicy Suya Platter -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow transition-transform duration-300 hover:-translate-y-1">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Spicy grilled beef suya with onions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOYr10ZfckUPT_Nyo8KtczRvenxpG4cHcCz9xpYjH32L8f0KmUeukDoE9yCtEn6aOsqxYKocaGUv69JCCIYPrQyfMXr8aTJRt4VmxJofTUWIC5gMZE3VLBoCQ5V30MBoxX0HI8K4viqNBNwvlW0e-XXIJXIpvtljIS9GplGP26SxGTUQNro7o_zVV9-n98Yu13xMinP6HCG0ZQ8dxeAKBgUIGihhyEH1GcG4heJIZP0UR_RwS_tOY4dfzdW1PHXsOxTM-Lt9TbEfc"/>
+<div class="absolute bottom-4 right-4">
+<div class="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl">
+<span class="font-headline font-bold text-primary text-lg">₦3,200</span>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-xl font-bold text-on-background">Spicy Suya Platter</h3>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-wider mt-1">Appetizer • Grilled</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-label text-primary font-bold">ONLINE</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-4 border-t border-surface-container">
+<button class="flex-1 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                                Edit
+                            </button>
+<button class="flex-1 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="analytics">analytics</span>
+                                Stats
+                            </button>
+<button class="p-2 text-error-dim hover:bg-error-container/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Egusi Soup Special -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow transition-transform duration-300 hover:-translate-y-1">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Hearty egusi soup with assorted meats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmNbypWYf7WeN_wWmOZPZHLpBvzHQBR0ShW1iPVmkj-HJ3FVUbwIGSTbob_zd-tMnQwnGrY4sMH6W1jCvimRsjkiNhH601a2WLUtbQCcthP9Jrnot6uuzBJVBfK-7LuMk_1RTD__xbrtN_cHmWqx-yL2SXoBklVDf1xQLPFJRCON2jWnbWzE2uA2xfPUhZdpXscBAvxTYsUb5og8Y_tWoZEHFJ3E-fFULOUddmI8E_s10iYADNa2FDE3HszIBKXTZlYhCiW0ZRycA"/>
+<div class="absolute bottom-4 right-4">
+<div class="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl">
+<span class="font-headline font-bold text-primary text-lg">₦5,800</span>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-xl font-bold text-on-background">Egusi Soup Special</h3>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-wider mt-1">Soups • Premium</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-label text-on-surface-variant font-bold">OFFLINE</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-4 border-t border-surface-container">
+<button class="flex-1 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                                Edit
+                            </button>
+<button class="flex-1 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="analytics">analytics</span>
+                                Stats
+                            </button>
+<button class="p-2 text-error-dim hover:bg-error-container/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Add New Listing Pseudo-Card -->
+<div class="group border-2 border-dashed border-outline-variant/30 rounded-xl flex flex-col items-center justify-center p-8 text-center bg-surface-container-low transition-all hover:bg-surface-container hover:border-primary/40 cursor-pointer min-h-[400px]">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="add_circle">add_circle</span>
+</div>
+<h4 class="font-headline text-lg font-bold text-on-background">Expand Your Menu</h4>
+<p class="text-on-surface-variant text-sm mt-2 max-w-[200px]">Share a new culinary masterpiece with your customers</p>
+<button class="mt-6 px-6 py-2.5 bg-primary text-on-primary rounded-full font-semibold text-sm">Add Listing</button>
+</div>
+</div>
+<!-- Empty State / Footer Analytics -->
+<div class="mt-20 p-8 rounded-2xl bg-primary-container/10 flex items-center gap-8">
+<div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="insights">insights</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-primary">Global Visibility</h3>
+<p class="text-on-surface-variant mt-1 leading-relaxed">Your listings reached over <span class="font-bold text-on-background">12,400 food enthusiasts</span> this week. Keep your availability toggled "Online" to maximize your Artisan Kitchen potential.</p>
+</div>
+<button class="ml-auto px-6 py-3 bg-primary text-on-primary rounded-full font-bold text-sm whitespace-nowrap shadow-lg shadow-primary/20">View Detailed Report</button>
+</div>
+</section>
+</main>
+</body></html>

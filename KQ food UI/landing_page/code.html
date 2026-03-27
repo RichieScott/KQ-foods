@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KQ Foods | Nigerian Food Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#a33700",
+              "surface-tint": "#8c4a00",
+              "surface-variant": "#dbdddd",
+              "primary": "#8c4a00",
+              "on-secondary-fixed-variant": "#6f534e",
+              "primary-container": "#fd8b00",
+              "on-secondary-fixed": "#503733",
+              "on-tertiary-fixed": "#310b00",
+              "on-background": "#2d2f2f",
+              "secondary-container": "#fed7d0",
+              "on-secondary": "#ffefed",
+              "on-surface-variant": "#5a5c5c",
+              "outline-variant": "#acadad",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e7e8e8",
+              "secondary-dim": "#644944",
+              "tertiary-fixed": "#ff946c",
+              "secondary-fixed-dim": "#efc9c3",
+              "on-error-container": "#520c00",
+              "primary-dim": "#7b4000",
+              "error": "#b02500",
+              "on-surface": "#2d2f2f",
+              "surface-container-high": "#e1e3e3",
+              "outline": "#767777",
+              "on-primary-fixed": "#180800",
+              "on-primary": "#fff0e7",
+              "inverse-on-surface": "#9c9d9d",
+              "background": "#f6f6f6",
+              "surface-container-highest": "#dbdddd",
+              "surface-container-low": "#f0f1f1",
+              "on-primary-container": "#442100",
+              "primary-fixed": "#fd8b00",
+              "inverse-primary": "#fd8b00",
+              "error-container": "#f95630",
+              "tertiary-container": "#ff946c",
+              "on-primary-fixed-variant": "#512800",
+              "surface": "#f6f6f6",
+              "inverse-surface": "#0c0f0f",
+              "error-dim": "#b92902",
+              "tertiary-dim": "#8f2f00",
+              "on-tertiary": "#ffefeb",
+              "on-tertiary-container": "#5b1b00",
+              "primary-fixed-dim": "#ea8000",
+              "on-secondary-container": "#654945",
+              "on-error": "#ffefec",
+              "tertiary-fixed-dim": "#ff7e4a",
+              "secondary": "#715550",
+              "surface-bright": "#f6f6f6",
+              "surface-dim": "#d3d5d5",
+              "on-tertiary-fixed-variant": "#6a2100",
+              "secondary-fixed": "#fed7d0"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-shadow {
+            shadow-sm shadow-orange-900/5;
+        }
+        .glass-nav {
+            background: rgba(246, 246, 246, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-nav">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-orange-800 dark:text-orange-400 italic font-headline tracking-tight">
+                KQ Foods
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-orange-800 dark:text-orange-400 font-bold border-b-2 border-orange-600 font-headline text-sm tracking-tight transition-all duration-300" href="#">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-700 font-headline text-sm tracking-tight transition-all duration-300" href="#">Market</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-700 font-headline text-sm tracking-tight transition-all duration-300" href="#">Orders</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-700 font-headline text-sm tracking-tight transition-all duration-300" href="#">Vendors</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-all duration-300 rounded-full active:scale-95 text-orange-700">
+<span class="material-symbols-outlined">location_on</span>
+</button>
+<button class="p-2 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-all duration-300 rounded-full active:scale-95 text-orange-700">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-all duration-300 rounded-full active:scale-95 text-orange-700">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10 space-y-8">
+<span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase font-label">The Digital Artisan Hub</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight leading-[1.1] text-on-surface">
+                        Delicious <span class="text-primary italic">Nigerian</span> Meals Delivered to You
+                    </h1>
+<p class="text-lg text-on-surface-variant max-w-md leading-relaxed">
+                        Experience the authentic taste of home with curated recipes from Nigeria's finest local vendors.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 max-w-lg">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Find your favorite food" type="text"/>
+</div>
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95">
+                            Order Now
+                        </button>
+</div>
+</div>
+<div class="relative lg:h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 bg-primary-container/10 rounded-[3rem] rotate-3 -z-10 scale-105"></div>
+<img alt="Nigerian Jollof Rice with Suya" class="rounded-[2rem] object-cover h-[500px] w-full shadow-2xl rotate-[-2deg] hover:rotate-0 transition-all duration-500" data-alt="Vibrant plate of smoky Jollof rice with grilled meat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNLUGWSTZEAaeJCBz2PvrztDu9KSZJX_QeZeMtdoxZMvq65rIO2qqRpszGFQf5XtrKSBz95cLhu2WmKrwI-zwmNPSzTTswBezAHOsB47NxhO89it8gWW2m9n-JNwHuo3eowJxP9norVm2xZOx1Qhmih4Ewfw1WaZkE1x-b_IMeNBvBBQALyCQEaSRUCtVA7Wyf0eef3zIXU_axLm_0VFYYhGuQFWDRtJAryrP5RRIf6ZxqFhUhg0bxXUoUmFHneTr-OQn6kHhQ2Xo"/>
+<div class="absolute -bottom-8 -left-8 p-6 bg-surface-container-lowest rounded-2xl shadow-xl max-w-[200px] hidden md:block">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9 Rating</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-tight">Authentic Smoky Taste from Lagos Main Market</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center mb-16 space-y-2">
+<h2 class="text-3xl font-headline font-bold text-center">Explore Categories</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary">rice_bowl</span>
+</div>
+<span class="mt-4 font-headline font-semibold text-sm">Rice Dishes</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary">soup_kitchen</span>
+</div>
+<span class="mt-4 font-headline font-semibold text-sm">Soups &amp; Swallow</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary">outdoor_grill</span>
+</div>
+<span class="mt-4 font-headline font-semibold text-sm">Street Food</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary">bakery_dining</span>
+</div>
+<span class="mt-4 font-headline font-semibold text-sm">Snacks</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary">local_bar</span>
+</div>
+<span class="mt-4 font-headline font-semibold text-sm">Drinks</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Foods Section (Bento Inspired Grid) -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-headline font-extrabold tracking-tight">Popular Foods</h2>
+<p class="text-on-surface-variant mt-2">The most loved dishes by our community this week.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                    View All <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Food Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 md:col-span-2">
+<div class="relative h-64 overflow-hidden">
+<img alt="Special Smoky Jollof Rice" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Smoky Jollof Rice with grilled chicken and plantain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv8vo9fVMhXNESKM6oN330_A4N7KntTsIsn0wZMKP-_MzAOWSENcEojZWwbkOr-rixYEgZDCR5s_MTal0tc7kPcrl6EbSkHCqQJAv8UbhHJre4uQ_bGly5Ba5PepDzJl025jwd-RW5sGkIZoizWfx66PE_hnTgO3QECgKXiNROjxNdZsShp99cwgG3xRLx7JjGuGVubseopaRjyMvidVrZu4JPaO98JcvcWn4z_xsIZs4lpPdZcbnKY8wSy7tpf7GJUAO7BDCZ15c"/>
+<div class="absolute top-4 right-4 bg-primary px-3 py-1 rounded-full text-on-primary text-xs font-bold uppercase">Bestseller</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-headline font-bold">Party Smoky Jollof Rice</h3>
+<span class="text-primary font-black text-lg">₦4,500</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Served with grilled peppered chicken and sweet fried plantains.</p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+<span class="text-xs font-semibold">Mama T's Kitchen</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Egusi Soup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Rich Nigerian Egusi soup with pounded yam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLt6TaStKwRKOteElS2haNTruk0prgK8nUwmDea0sqCfVinyghvw-mYbws9q_y7xr86q7YM3_vZM9eVjh1ClHq9vO7ffuPGdAiMwdcNPFvBtlhdaYxYGI6G8TPXMoJbI858KvCPsMcxwGWqTXfj6LR8rYbpzEwvZFUC2lmBWhBdFdz8UNf1w3dSvQ-5dArS3JjiAqXHU9fBi7Y7AhGWIGK2INwGcbWOfXYNohqmpGL0Vaa8-Bh8KhqAvOWp3-tAMa4qEpT4mIjKXs"/>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-headline font-bold mb-1">Egusi with Pounded Yam</h3>
+<span class="text-primary font-black">₦5,200</span>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-surface-container">
+<span class="text-xs text-on-surface-variant">Lagos Kitchen</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Street Food" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Delicious Nigerian Akara balls served with pap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3oJuWpo3UjQtoRAVMpmvpOIW4cmkdYFK2tbKRBuFolgaUicZ9qIFJD7Fs7jwCmcH4frGMUK_OT7b3YLFFHQGgq-9NypmL4pjqsT_udYSepEjic8-89UrnfPIqEA3bzUy9PN3AHbcaMq7-oQ-0zL5unaz_L08CPPSto1FG4P5SLKMIDkNREl_Dz7lLDceYjQUPrm2_v3A1e0BEJpW9VloeVcsfXZG4int7ZRFXWwClyb0SwoUxUK0-reOVER2N6BiTanxKdPeXfSk"/>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-headline font-bold mb-1">Akara &amp; Custard</h3>
+<span class="text-primary font-black">₦1,200</span>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-surface-container">
+<span class="text-xs text-on-surface-variant">Morning Treats</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.7</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Nigerian Snacks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Golden fried Nigerian Puff Puff snacks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZmAk9jAYIHciqQOa91OHIEVO7ZHN0_-BxGw1uF_0oxyhWR_j1qzU-we86Jd6lDnIQpHEbc9l9jz8cotNWbrLUY_-pqEqi2huXmb4-ZRlBEi3sgZYujUjJXryN1TIMBurIuCAmSDyQeGuMiOjzNiq6rITQjvcOzFcW2UzXPB5TPVybWMTmOuYVAQVPMD58ajB5muXoAteu-tNtPF9eY4NEZaytGQc75NnTa9O43zZiwGMwF6QqY0bkX7maNUNo2by8bUaTwVjyUU4"/>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-headline font-bold mb-1">Sweet Puff Puff (12pcs)</h3>
+<span class="text-primary font-black">₦800</span>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-surface-container">
+<span class="text-xs text-on-surface-variant">The Snack Hub</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.6</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 5 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 lg:col-span-2">
+<div class="relative h-64 overflow-hidden">
+<img alt="Asun Meat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Spicy grilled peppered goat meat platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWSkMJpat-Lp8tKTBbcnp8C40xup4fDk1JxmRSJdc_Si0txpBBE2K-RKo-y7mdie77sSlMYEogyof0vXa2A_0hlgsRq_sLcrAnbDCPvkQFHV-UehFu7ZL_0-z1iRSQRZzZgFh5MBGQzjM_jw_XXqaST-uZe8-6gSm8ZhH1vVlrMSehbY210dMHAsGbrRHp4MgUmN2f7SeQ8m5tA0Xtcd5KtnqyXacBN-522HlLJw0Za_tsmEYbMTxJlRdzfLFlPUP762FBBWCHFe8"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-headline font-bold">Peppered Asun Platter</h3>
+<span class="text-primary font-black text-lg">₦6,000</span>
+</div>
+<p class="text-sm text-on-surface-variant">Slow-grilled goat meat chopped and sautéed in spicy habanero sauce.</p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container mt-4">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold">Grill Master Lagos</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 6 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Abacha Salad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Traditional African salad garnished with fish and garden eggs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk1E4uYOOK4ReN6UzyEI59AuZd9qyXv-_EFG9YdUpjDJZykhcbTVZ3Igv4cWvDVXOiHbED2YC6k7YdCC7nCUAz9i_NcdNnHiOaPpQOJcbcxWL7Qs_tQEXnlbsGMma575vffO7fzLOR9CKZ0ygMIkPFSs_DyhLrFZNi9_vSCqWaDB0PdslWhZk9IhNM9uikkwKw5vcHKEcSvI2cT09LDckESzJ5JrcNj_C7rg409gcYIXr1V1sQ9QVzIFtsKRJIEYNvy2dlhozMeN4"/>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-headline font-bold mb-1">Traditional Abacha</h3>
+<span class="text-primary font-black">₦2,500</span>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-surface-container">
+<span class="text-xs text-on-surface-variant">Igbo Flavors</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.8</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Sellers Section -->
+<section class="py-24 px-6 bg-surface-container">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="text-3xl font-headline font-bold">Top Featured Sellers</h2>
+<p class="text-on-surface-variant">Highly-rated artisans bringing the best tastes to your doorstep.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:-translate-y-2 transition-transform duration-300">
+<div class="w-20 h-20 rounded-full bg-orange-100 mb-4 overflow-hidden ring-4 ring-primary-container/20">
+<img alt="Mama T" class="w-full h-full object-cover" data-alt="Portrait of a smiling female chef" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8HIkcvZz11FB9jT4UmipushaVabt1WQ0jw5gv718vu3rz5__tPCeflAx8oUAkIkp2EJHX48FDxdrohShzpeRgk52xIsF1SUZpqTqK-9jomfQktFu8nCPyGoAP23Hlne0alSn-0bYw95_cjY_Z-vjO1ReFQmdmTFXE86qbf_Z9vie7oxh0IAdIUddZ6s5Pqkj6R5iiuhXXdqVfWDQC4rKppI3xCQmOIHhs0r-36QLos19_jdgj8FfC0OKc7yvi5-m8CC8oVrLFJGY"/>
+</div>
+<h4 class="font-headline font-bold">Mama T's Kitchen</h4>
+<p class="text-xs text-on-surface-variant mb-4">Specialist in Rice &amp; Stews</p>
+<div class="flex items-center gap-1 bg-secondary-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-secondary-container">4.9 (1.2k+ Orders)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:-translate-y-2 transition-transform duration-300">
+<div class="w-20 h-20 rounded-full bg-orange-100 mb-4 overflow-hidden ring-4 ring-primary-container/20">
+<img alt="Grill Master" class="w-full h-full object-cover" data-alt="Portrait of a smiling male chef" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfaEfRm7kCdM1GzJOCbbL19QlCiQ-wtwNpPLfu8Hi0GCYP8N_ZHRv2JVQDV9Hovczv1i_qA_exBUJN8YlC5frLLWZkaOmDkdxCh9PWd7qqwizx6Ge8Lfc8tJqax_3sGX2iUYxfVaX5hP8em9Wdf-E9D7krdsAX4tv0Fw5-We8G1sLEho7OYPP9G1fXs3V-wbXRk8MO7W3d4eUEnre1qgUzkyxGgg5_cO934wC8okCdbisUtY3qqKQlMKZOTlA4KSN8CWMypMIX3A4"/>
+</div>
+<h4 class="font-headline font-bold">Grill Master Lagos</h4>
+<p class="text-xs text-on-surface-variant mb-4">Native Grills &amp; Barbecue</p>
+<div class="flex items-center gap-1 bg-secondary-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-secondary-container">4.8 (850 Orders)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:-translate-y-2 transition-transform duration-300">
+<div class="w-20 h-20 rounded-full bg-orange-100 mb-4 overflow-hidden ring-4 ring-primary-container/20">
+<img alt="Sweet Bites" class="w-full h-full object-cover" data-alt="Portrait of a smiling woman in a chef uniform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8i9LXGD91kABU9MCz6UcePZkJ67MnuAfpeCcmWoCotktScAwjt3PRdFcn7oSskrK1qNdM3Ylkpx3N_Ce2tZ5isHlVENMMHc6I3bOjZ0Myqgb9EeP8iOv2s69bLQPT4fFrRf2VacCWoeUlxMue-alOMrurnJT7ffHqFOl9MIOjdxj1Bnq5dFcRZ21CzKwwZQ-FT263eKdQhv4IqPEDqT0PckR7Tkjp_MF2DXGRkb0z4HaFnbqmEhJm8Y56qoTJ8bSrP1N0CEQriEY"/>
+</div>
+<h4 class="font-headline font-bold">The Snack Hub</h4>
+<p class="text-xs text-on-surface-variant mb-4">Pastries &amp; Street Snacks</p>
+<div class="flex items-center gap-1 bg-secondary-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-secondary-container">4.7 (2.1k Orders)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:-translate-y-2 transition-transform duration-300">
+<div class="w-20 h-20 rounded-full bg-orange-100 mb-4 overflow-hidden ring-4 ring-primary-container/20">
+<img alt="Igbo Flavors" class="w-full h-full object-cover" data-alt="Portrait of a smiling female vendor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRC0Yrpg7ov0G0JnYC_IcVCZdVZ7yDHY-tKFqUHPUHK-iTTof-ebx9i4fZyzIEqXP57e7T5QVLwVU9o2vxtCg5JNf4rf21UCP4Lb0t2LeTH6bgG8AHrfzninS-qNQESNoL8U3m2kfjM7eFT0VW-ksCydXgPxO7OnaGx_Dy8FGEX9i0gw0SvUX4zG1Wt2US-URG1ggVEZK3GWivjbnDymPXr5fM-Rie89M_PXro9kE55GPW0hsW4S9ByNqj2RdzMpqZGuF3t_Iq2Ik"/>
+</div>
+<h4 class="font-headline font-bold">Igbo Flavors</h4>
+<p class="text-xs text-on-surface-variant mb-4">Authentic Southeast Soups</p>
+<div class="flex items-center gap-1 bg-secondary-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-secondary-container">4.9 (500 Orders)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews Section -->
+<section class="py-24 px-6 max-w-7xl mx-auto overflow-hidden">
+<h2 class="text-3xl font-headline font-bold text-center mb-16">What Our Community Says</h2>
+<div class="flex flex-nowrap gap-6 overflow-x-auto pb-8 scrollbar-hide">
+<div class="min-w-[300px] md:min-w-[400px] bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-5xl text-primary/10 absolute top-4 right-4">format_quote</span>
+<p class="italic text-on-surface-variant leading-relaxed mb-6">"The Smoky Jollof reminds me exactly of Lagos parties. Delivery was fast and the food arrived piping hot. Highly recommended!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-zinc-300 overflow-hidden">
+<img alt="User" data-alt="Portrait of a smiling user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXweX0hcQGNhqXi1wsU9-hrBtWcu6fKMeB8u96_pEG5RBo5I7rMtJlTBhcZgOux9y1EVLE-vQBtrIp3kbnba0oaOPmSL9oecRRd3ttjmepan6DSHNPzqjTSsyxMLi_De80woQnPfhXoWcH6-wxBZ0kivmfTXq_Y9RO7Jmm1gR5zuQ1zFF0w2Zl5bHbkZHtqNGFTFk1W8ncS7MHwv5imuOZGOkepzTF4hq3TYWS6k1ni0bV9OlRqxFCMhrqU6FZy7KXrNlDhdYcPfc"/>
+</div>
+<div>
+<h5 class="font-bold text-sm">Chidi Opara</h5>
+<p class="text-xs text-outline italic">Lekki, Lagos</p>
+</div>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[400px] bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-5xl text-primary/10 absolute top-4 right-4">format_quote</span>
+<p class="italic text-on-surface-variant leading-relaxed mb-6">"Finally a place where I can get real Egusi soup with that home-cooked taste. KQ Foods is my new favorite for lunch."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-zinc-300 overflow-hidden">
+<img alt="User" data-alt="Portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbiGXcv1UlaOjhMd5tVyVZQmiVin4HNBzHWrRrQnskwfEoLhQ9Q_rRSn4_35sxW2CXw_zK2DNUWWyMul0s2jqwRw0wb8CUW5Lg-KsdvYhFEyGPKGMe1XnICEmUxJu2oIbHrjVzcK4mVlQc9QdLAea1NKDrKpvI8iHfN-yPwc0SQjoDx-DWst8WxRSuxT25UzaEff7Bax2j-IBYmOnTmsMl5fYoh8OF7pUQWPHXqjroFqNaus1kJHhS4iuzlJKp8rWCXpgcEKkd08Q"/>
+</div>
+<div>
+<h5 class="font-bold text-sm">Fatima Bello</h5>
+<p class="text-xs text-outline italic">Abuja, FCT</p>
+</div>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[400px] bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-5xl text-primary/10 absolute top-4 right-4">format_quote</span>
+<p class="italic text-on-surface-variant leading-relaxed mb-6">"The Puff Puff was so fresh and sweet. It’s hard to find authentic street snacks that are this hygienic and well-packaged."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-zinc-300 overflow-hidden">
+<img alt="User" data-alt="Portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx0wopF2FvYpjlPnT2PV4bfIi9kyJyIOILKY2BPwozZmJmCbCp8udjCfqbScNGSyv1A_4lv_34PUyQ0I9v7D5H_WlaidIgeuUTBUqhyE8hT9TT6sd7ZfBL1VHVtz5f2P9Ei0EPi7FoCXSySpTSNP0HCIi8-ID5_U7zSQKNmKoVBCTaVQiWQYkw57tsIMZ92eF1_iBBPQjzHr80wITh2r4tBVPCQtPVGpCDGCSWeYZEyYH2VBYs51RvVfJb6_-fBWzzs9JkRQ0izo0"/>
+</div>
+<div>
+<h5 class="font-bold text-sm">Tunde Williams</h5>
+<p class="text-xs text-outline italic">Port Harcourt</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest py-16 px-6 mt-20 border-t-0">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="text-2xl font-black text-orange-800 italic font-headline">KQ Foods</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Connecting you with the heart of Nigerian cuisine, one meal at a time. Authenticity and quality guaranteed.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">public</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+</div>
+</div>
+<div>
+<h6 class="font-headline font-bold mb-6">Company</h6>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Vendors</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold mb-6">Support</h6>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Safety Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Community Guidelines</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold mb-6">Download App</h6>
+<p class="text-xs text-on-surface-variant mb-4">Get the best experience on your mobile device.</p>
+<div class="flex flex-col gap-3">
+<button class="flex items-center gap-3 bg-on-surface text-surface py-2 px-4 rounded-lg">
+<span class="material-symbols-outlined">phone_iphone</span>
+<div class="text-left">
+<p class="text-[10px] uppercase leading-none">Download on the</p>
+<p class="text-sm font-bold leading-none">App Store</p>
+</div>
+</button>
+<button class="flex items-center gap-3 bg-on-surface text-surface py-2 px-4 rounded-lg">
+<span class="material-symbols-outlined">phone_android</span>
+<div class="text-left">
+<p class="text-[10px] uppercase leading-none">Get it on</p>
+<p class="text-sm font-bold leading-none">Google Play</p>
+</div>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-16 mt-16 border-t border-outline-variant/20 text-center">
+<p class="text-xs text-outline">© 2024 KQ Foods Marketplace. All rights reserved. Built for Nigerian food lovers.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface/80 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.06)] z-50 rounded-t-3xl">
+<a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-200 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-['Inter'] font-semibold uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-600 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-['Inter'] font-semibold uppercase tracking-wider mt-1">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-600 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-['Inter'] font-semibold uppercase tracking-wider mt-1">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-600 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-['Inter'] font-semibold uppercase tracking-wider mt-1">Account</span>
+</a>
+</div>
+</body></html>
